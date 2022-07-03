@@ -13,9 +13,13 @@ for i in range(1, num_of_cows+1):
     name_of_file = 'COW' + str(i) + ".csv"
 
     globals()[current_cow + "_data"] = pd.read_csv(name_of_file)
+    # Holds list off the data dates of each cow
     globals()[current_cow + "_date_list"] = globals()[current_cow + "_data"]["Date"].tolist()
+    # Holds tuple off the data dates of each cow
     globals()[current_cow + "_date_tuple"] = tuple(globals()[current_cow + "_date_list"])
+    # The number of measurements of a cow per day
     globals()[current_cow + "_num_of_days"] = {}
+    # Array with with longitude and latitude of the measurements of the cows
     globals()[current_cow + "_la_lo_array"] = globals()[current_cow + "_data"].iloc[:, [2, 3]].to_numpy()
 
     # sets values inside _num_of_days var
