@@ -68,7 +68,8 @@ for i in range(1, num_of_cows+1):
 
         pre_cords = current_cords
 # Merge the cows dataframes
-general = pd.concat([globals()["cow1_filter"], globals()["cow2_filter"], globals()["cow3_filter"], globals()["cow4_filter"], globals()["cow5_filter"], globals()["cow6_filter"]])
+general = pd.concat([globals()["cow1_filter"], globals()["cow2_filter"], globals()["cow3_filter"],
+                     globals()["cow4_filter"], globals()["cow5_filter"], globals()["cow6_filter"]])
 
 print(general)
 print(type(general))
